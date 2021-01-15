@@ -215,6 +215,10 @@ pipeline {
             stage('Azure Authenticator') {
               agent { label 'azure-linux' }
 
+              when {
+                expression { params.NIGHTLY }
+              }
+
               environment {
                 // TODO: Move this into the authenticators_azure bash script.
                 AZURE_AUTHN_INSTANCE_IP = sh(
@@ -261,6 +265,10 @@ pipeline {
             * conjurops or git identities and is not open for SSH.
             */
             stage('GCP Authenticator preparation - Allocate GCE Instance') {
+              when {
+                expression { params.NIGHTLY }
+              }
+
               steps {
                 echo '-- Allocating Google Compute Engine'
 
@@ -324,6 +332,10 @@ pipeline {
             * the GCP project env var.
             */
             stage('GCP Authenticator preparation - Allocate Google Function') {
+              when {
+                expression { params.NIGHTLY }
+              }
+
               environment {
                 GCP_FETCH_TOKEN_FUNCTION = "fetch_token_${BUILD_NUMBER}"
                 IDENTITY_TOKEN_FILE = 'identity-token'
@@ -386,6 +398,10 @@ pipeline {
             * gcp-authn tests.
             */
             stage('GCP Authenticator - Run Tests') {
+              when {
+                expression { params.NIGHTLY }
+              }
+
               steps {
                 echo('Waiting for GCP Tokens provisioned by prep stages.')
 
