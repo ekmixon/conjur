@@ -180,7 +180,7 @@ GEM
     erubi (1.9.0)
     event_emitter (0.2.6)
     excon (0.73.0)
-    ffi (1.12.2)
+    ffi (1.9.25)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
@@ -460,7 +460,7 @@ DEPENDENCIES
   debase
   dry-struct (~> 0.4.0)
   dry-types (~> 0.12.2)
-  ffi (>= 1.9.24)
+  ffi (= 1.9.25)
   gli
   haikunator (~> 1)
   http (~> 4.2.0)

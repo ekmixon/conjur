@@ -41,7 +41,7 @@ gem 'listen'
 gem 'slosilo', '~> 2.2'
 
 # Explicitly required as there are vulnerabilities in older versions
-gem "ffi", ">= 1.9.24"
+gem "ffi", "1.9.25"
 gem "loofah", ">= 2.2.3"
 
 # Installing ruby_dep 1.4.0
