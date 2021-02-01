@@ -115,7 +115,15 @@ module Authentication
       end
 
       def host
-        @host ||= @resource_class[host_id]
+        return @host if @host
+
+        @host = @resource_class[host_id]
+        unless @host
+          raise Errors::Authentication::Security::RoleNotFound.new(
+            host_id
+          )
+        end
+        @host
       end
 
       def validate_spiffe_id_exists
