@@ -17,10 +17,10 @@ gem 'command_class'
 gem 'http', '~> 4.2.0'
 gem 'iso8601'
 gem 'jbuilder', '~> 2.7.0'
-gem 'nokogiri', '>= 1.8.2'
+gem 'nokogiri', '>= 1.12.5'
 gem 'puma', '~> 5.3.2'
 gem 'rack', '~> 2.2.3'
-gem 'rails', '~> 5.2'
+gem 'rails', '~> 5.2', '>= 5.2.6'
 gem 'rake'
 # gem 'sprockets', '~> 3.7.0', '>= 3.7.2'
 
@@ -31,7 +31,7 @@ gem 'pg'
 gem 'sequel', '4.49.0'
 gem 'sequel-pg_advisory_locking'
 gem 'sequel-postgres-schemata', require: false
-gem 'sequel-rails'
+gem 'sequel-rails', '>= 1.1.0'
 
 gem 'activesupport'
 gem 'base32-crockford'
@@ -42,7 +42,7 @@ gem 'slosilo', '~> 2.2'
 
 # Explicitly required as there are vulnerabilities in older versions
 gem "ffi", ">= 1.9.24"
-gem "loofah", ">= 2.2.3"
+gem "loofah", ">= 2.9.1"
 
 # Installing ruby_dep 1.4.0
 # Gem::InstallError: ruby_dep requires Ruby version >= 2.2.5, ~> 2.2.
@@ -107,12 +107,12 @@ group :development, :test do
   gem 'parallel'
   gem 'pry-byebug'
   gem 'pry-rails'
-  gem 'rails-controller-testing'
+  gem 'rails-controller-testing', '>= 1.0.4'
   gem 'rails_layout'
   gem 'rake_shared_context'
   gem 'rspec'
   gem 'rspec-core', '~> 3.0'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 4.0.0'
   gem 'ruby-debug-ide'
   gem 'spring'
   gem 'spring-commands-cucumber'
