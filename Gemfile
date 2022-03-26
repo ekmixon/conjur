@@ -77,7 +77,7 @@ end
 
 # authn-k8s
 gem 'event_emitter'
-gem 'kubeclient'
+gem 'kubeclient', '>= 4.9.3'
 gem 'websocket'
 
 # authn-oidc, gcp, azure, jwt
