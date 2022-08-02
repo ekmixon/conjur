@@ -31,8 +31,9 @@ def get_key(key_name, alg):
             'ES512': jwk.JWK.generate(kty='EC', crv='P-521'),
             'HS256': jwk.JWK.generate(kty='oct', size=256),
             'HS384': jwk.JWK.generate(kty='oct', size=384),
-            'HS512': jwk.JWK.generate(kty='oct', size=512)
-        }.get(alg, None)
+            'HS512': jwk.JWK.generate(kty='oct', size=512),
+        }.get(alg)
+
     return keys[key_name]
 
 
@@ -58,9 +59,7 @@ def jwks_json_with_single_key(key):
 
 def jwks_json_with_all_keys():
     '''Creates JWKS json with all keys'''
-    key_list = []
-    for key in keys.values():
-        key_list.append(export_key_with_kid(key))
+    key_list = [export_key_with_kid(key) for key in keys.values()]
     return json.dumps({
         JWKS_KEYS_KEY: key_list
     })
