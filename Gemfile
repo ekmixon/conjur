@@ -83,7 +83,7 @@ gem 'websocket'
 # authn-oidc, gcp, azure, jwt
 gem 'jwt', '2.2.2' # version frozen due to authn-jwt requirements
 # authn-oidc
-gem 'openid_connect'
+gem 'openid_connect', '>= 1.3.0'
 
 # Unpin version once this Github issue,
 # https://github.com/palkan/anyway_config/issues/82
