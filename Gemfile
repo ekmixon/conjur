@@ -109,7 +109,7 @@ group :development, :test do
   gem 'rake_shared_context'
   gem 'rspec'
   gem 'rspec-core', '~> 3.0'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 8.0.0'
   gem 'ruby-debug-ide'
   gem 'spring'
   gem 'spring-commands-cucumber'
