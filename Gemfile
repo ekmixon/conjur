@@ -20,7 +20,7 @@ gem 'jbuilder', '~> 2.7.0'
 gem 'nokogiri', '>= 1.8.2'
 gem 'puma', '~> 5.5.1'
 gem 'rack', '~> 2.2.3'
-gem 'rails', '~> 5.2'
+gem 'rails', '~> 5.2', '>= 5.2.6.1'
 gem 'rake'
 # gem 'sprockets', '~> 3.7.0', '>= 3.7.2'
 
@@ -28,7 +28,7 @@ gem 'pg'
 gem 'sequel'
 gem 'sequel-pg_advisory_locking'
 gem 'sequel-postgres-schemata', require: false
-gem 'sequel-rails'
+gem 'sequel-rails', '>= 1.1.1'
 
 gem 'activesupport'
 gem 'base32-crockford'
@@ -91,7 +91,7 @@ gem 'openid_connect'
 gem "anyway_config", "2.1.0"
 
 group :development, :test do
-  gem 'aruba'
+  gem 'aruba', '>= 1.0.1'
   gem 'ci_reporter_rspec'
   gem 'conjur-cli', '~> 6.1'
   gem 'conjur-debify', require: false
@@ -109,7 +109,7 @@ group :development, :test do
   gem 'rake_shared_context'
   gem 'rspec'
   gem 'rspec-core', '~> 3.0'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 4.0.1'
   gem 'ruby-debug-ide'
   gem 'spring'
   gem 'spring-commands-cucumber'
